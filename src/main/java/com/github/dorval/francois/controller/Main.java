@@ -17,6 +17,10 @@ public class Main {
         int dividende = MathUtils.parseIntegerString(args[0]);
         int diviseur = MathUtils.parseIntegerString(args[1]);
 
+        if (diviseur == 0){
+            throw new IllegalArgumentException(Errors.DIVISION_PAR_ZERO);
+        }
+
         int quotient = Divisifieur.diviser(dividende, diviseur);
 
         System.out.println(dividende+"/"+diviseur+"=" +quotient);
